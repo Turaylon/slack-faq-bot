@@ -11,6 +11,10 @@
 |
 */
 
+use Maknz\Slack\Facades\Slack;
+
 Route::get('/', function () {
+    Slack::to('#general')->send('Are we rich yet?');
+
     return view('welcome');
 });
